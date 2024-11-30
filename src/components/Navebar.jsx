@@ -49,7 +49,7 @@ const Navbar = () => {
             <span className="text-naturalPrimary">NEXTOEX</span>
           </Link>
           {/* Desktop Nav Items */}
-          <ul className="hidden space-x-12 lg:flex">
+          <ul className="space-x-12 lg:flex" hidden>
             {navItems.map(({ link, path }) => (
               <li key={path} className="hover:text-naturalPrimary">
                 <Link to={path} spy={true} smooth={true} offset={-100}>
@@ -57,13 +57,14 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+
+            {/* GET STARTED Button */}
+            <RouterLink to="/contact">
+              <button className="px-4 py-2 text-white rounded bg-naturalPrimary hover:bg-naturalDGrey">
+                GET STARTED
+              </button>
+            </RouterLink>
           </ul>
-          {/* GET STARTED Button */}
-          <RouterLink to="/contact">
-            <button className="px-4 py-2 text-white rounded bg-naturalPrimary hover:bg-naturalDGrey">
-              GET STARTED
-            </button>
-          </RouterLink>
 
           {/* Mobile Menu Toggle */}
           <button
