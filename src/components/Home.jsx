@@ -28,11 +28,12 @@ function Home() {
         </div>
         <div className="text-center">
           <h1 className="text-5xl font-semibold tracking-tight text-gray-900 text-balance sm:text-7xl">
-            Data to enrich your online business
+            Empowering Digital Growth
           </h1>
           <p className="mt-8 text-lg font-medium text-gray-500 text-pretty sm:text-xl/8">
-            Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui
-            lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat.
+            Transform your ideas into reality with innovative software
+            development, cloud services, and IT consulting. Let's build the
+            future together.
           </p>
           <div className="flex items-center justify-center mt-10 gap-x-6">
             <a

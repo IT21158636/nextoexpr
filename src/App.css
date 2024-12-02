@@ -1,17 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 header {
   z-index: 10001 !important;
 }
 
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
 /* .btn-primary {
   @apply px-7 py-2 bg-naturalPrimary text-white rounded hover:bg-neutralDGrey transition-all duration-300 hover:translate-y-4;
 } */
 
 .bg-neutralSilver {
-  background-color: #F6F9FE;
+  background-color: #f6f9fe;
 }
