@@ -7,6 +7,7 @@ import logo from "../assets/logo.jpg";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
+  const [activeSection, setActiveSection] = useState(""); // Track active section
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -51,8 +52,19 @@ const Navbar = () => {
           {/* Desktop Nav Items */}
           <ul className="space-x-12 lg:flex" hidden>
             {navItems.map(({ link, path }) => (
-              <li key={path} className="hover:text-naturalPrimary">
-                <Link to={path} spy={true} smooth={true} offset={-100}>
+              <li
+                key={path}
+                className={`hover:text-naturalPrimary ${
+                  activeSection === path ? "text-naturalPrimary font-bold" : ""
+                }`}
+              >
+                <Link
+                  to={path}
+                  spy={true}
+                  smooth={true}
+                  offset={-100}
+                  onSetActive={() => setActiveSection(path)}
+                >
                   {link}
                 </Link>
               </li>
@@ -82,12 +94,18 @@ const Navbar = () => {
         }`}
       >
         {navItems.map(({ link, path }) => (
-          <li key={path} className="py-2 text-center hover:bg-gray-100">
+          <li
+            key={path}
+            className={`py-2 text-center hover:bg-gray-100 ${
+              activeSection === path ? "bg-naturalPrimary text-white" : ""
+            }`}
+          >
             <Link
               to={path}
               spy={true}
               smooth={true}
               offset={-100}
+              onSetActive={() => setActiveSection(path)}
               onClick={() => setIsMenuOpen(false)}
             >
               {link}
