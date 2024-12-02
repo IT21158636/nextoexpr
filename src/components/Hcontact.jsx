@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Hcontact() {
   return (
-    <div className="px-4 mx-auto my-8 lg:px-14 max-w-screen-2xl">
+    <div className="px-4 mx-auto my-8 lg:px-14 max-w-screen-2xl"  id="contact">
       <div className="text-center section-title">
         <h2 className="mb-3 text-4xl font-semibold text-naturalPrimary">
           Contact us

@@ -50,7 +50,7 @@ function Services() {
   ];
 
   return (
-    <div className="px-4 py-16 mx-auto md:px-14 max-w-screen-2xl" id="service">
+    <div className="px-4 py-16 mx-auto md:px-14 max-w-screen-2xl">
       <div className="my-8 text-center">
         <h2 className="mb-2 text-4xl font-semibold text-naturalDGrey">
           Our clients
@@ -75,7 +75,7 @@ function Services() {
         </div>
       </div>
 
-      <div className="mx-auto mt-20 text-center md:w-1/2">
+      <div className="mx-auto mt-20 text-center md:w-1/2" id="service">
         <h2
           data-aos="fade-left"
           className="mb-3 text-4xl font-semibold text-naturalDGrey"

@@ -28,7 +28,7 @@ const Navbar = () => {
     { link: "Service", path: "service" },
     { link: "About", path: "about" },
     { link: "Testimonial", path: "testimonial" },
-    { link: "Contact Us", path: "/contact" },
+    { link: "Contact Us", path: "contact" },
   ];
 
   return (
