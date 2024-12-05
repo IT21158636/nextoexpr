@@ -6,7 +6,7 @@ function Home() {
     <div className="relative px-6 isolate pt-14 lg:px-8">
       <div
         className="absolute inset-x-0 overflow-hidden -top-40 -z-10 transform-gpu blur-3xl sm:-top-80"
-        aria-hidden="true" 
+        aria-hidden="true"
       >
         <div
           className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
@@ -16,8 +16,8 @@ function Home() {
           }}
         ></div>
       </div>
-      <div className="max-w-2xl py-32 mx-auto sm:py-30 lg:py-30" id="home" >
-        <div className="hidden sm:mb-8 sm:flex sm:justify-center" >
+      <div className="max-w-2xl py-32 mx-auto sm:py-30 lg:py-30" id="home">
+        <div className="hidden sm:mb-8 sm:flex sm:justify-center">
           <div className="relative px-3 py-1 text-gray-600 rounded-full text-sm/6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
             Announcing our next round of funding.{" "}
             <a href="#" className="font-semibold text-indigo-600">
@@ -27,8 +27,8 @@ function Home() {
           </div>
         </div>
         <div className="text-center">
-          <h1 className="text-5xl font-semibold tracking-tight text-gray-900 text-balance sm:text-7xl">
-            Empowering Digital Growth
+          <h1 className="font-semibold tracking-tight text-gray-900 text-10xl text-balance sm:text-7xl">
+            Empowering Digital Growth.
           </h1>
           <p className="mt-8 text-lg font-medium text-gray-500 text-pretty sm:text-xl/8">
             Transform your ideas into reality with innovative software
@@ -38,7 +38,7 @@ function Home() {
           <div className="flex items-center justify-center mt-10 gap-x-6">
             <a
               href="#"
-              className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="px-4 py-2 text-white rounded bg-naturalPrimary hover:bg-naturalDGrey"
             >
               Get started
             </a>

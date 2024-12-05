@@ -28,7 +28,7 @@ const Navbar = () => {
     { link: "Service", path: "service" },
     { link: "About", path: "about" },
     { link: "Testimonial", path: "testimonial" },
-    { link: "Contact Us", path: "contact" },
+    // { link: "Contact Us", path: "contact" },
   ];
 
   return (
@@ -73,7 +73,7 @@ const Navbar = () => {
             {/* GET STARTED Button */}
             <RouterLink to="/contact">
               <button className="px-4 py-2 text-white rounded bg-naturalPrimary hover:bg-naturalDGrey">
-                GET STARTED
+                Contact Us
               </button>
             </RouterLink>
           </ul>
