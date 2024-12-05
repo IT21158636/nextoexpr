@@ -1,9 +1,7 @@
 import React from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
-import logo1 from "../assets/logo1.png";
-import logo2 from "../assets/company2.png";
-import logo3 from "../assets/logo.jpg";
+import Ourclient from "./Ourclient";
 
 AOS.init({
   // defines which position of the element regarding to window should trigger the animation
@@ -51,29 +49,7 @@ function Services() {
 
   return (
     <div className="px-4 py-16 mx-auto md:px-14 max-w-screen-2xl">
-      <div className="my-8 text-center">
-        <h2 className="mb-2 text-4xl font-semibold text-naturalDGrey">
-          Our clients
-        </h2>
-        <p className="text-naturalDGrey">we've done +100 projects</p>
-        <div className="flex flex-wrap items-center justify-between gap-8 my-12">
-          <img
-            src={logo1}
-            alt="Logo 1"
-            className="max-w-[200px] max-h-[100px] object-contain"
-          />
-          <img
-            src={logo2}
-            alt="Company 1"
-            className="max-w-[200px] max-h-[100px] object-contain"
-          />
-          <img
-            src={logo3}
-            alt="Company 2"
-            className="max-w-[200px] max-h-[100px] object-contain"
-          />
-        </div>
-      </div>
+      <Ourclient />
 
       <div className="mx-auto mt-20 text-center md:w-1/2" id="service">
         <h2
