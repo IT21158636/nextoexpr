@@ -14,9 +14,10 @@ const Navbar = () => {
   };
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScroll = debounce(() => {
       setIsSticky(window.scrollY > 100);
-    };
+    }, 50); // Debounce to improve performance
+
     window.addEventListener("scroll", handleScroll);
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -27,8 +28,8 @@ const Navbar = () => {
     { link: "Home", path: "home" },
     { link: "Service", path: "service" },
     { link: "About", path: "about" },
-    { link: "Testimonial", path: "testimonial" },
-    // { link: "Contact Us", path: "contact" },
+    { link: "Our Work", path: "Ourwork" },
+    { link: "Contact Us", path: "contact" },
   ];
 
   return (
@@ -71,11 +72,11 @@ const Navbar = () => {
             ))}
 
             {/* GET STARTED Button */}
-            <RouterLink to="/contact">
+            {/* <RouterLink to="/contact">
               <button className="px-4 py-2 text-white rounded bg-naturalPrimary hover:bg-naturalDGrey">
                 Contact Us
               </button>
-            </RouterLink>
+            </RouterLink> */}
           </ul>
 
           {/* Mobile Menu Toggle */}
@@ -83,13 +84,13 @@ const Navbar = () => {
             className="lg:hidden text-neutralDGrey focus:outline-none"
             onClick={toggleMenu}
           >
-            {isMenuOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+            {isMenuOpen ? <FaTimes size={34} /> : <FaBars size={24} />}
           </button>
         </div>
       </nav>
       {/* Mobile Nav Items */}
       <ul
-        className={`lg:hidden transition-all duration-300 bg-brandPrimary absolute w-full left-0 ${
+        className={`lg:hidden transition-all duration-300 bg-white absolute w-full left-0 ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
@@ -116,5 +117,12 @@ const Navbar = () => {
     </header>
   );
 };
+function debounce(func, wait) {
+  let timeout;
+  return (...args) => {
+    clearTimeout(timeout);
+    timeout = setTimeout(() => func.apply(this, args), wait);
+  };
+}
 
 export default Navbar;
