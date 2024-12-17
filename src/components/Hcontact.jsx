@@ -12,14 +12,14 @@ function Hcontact() {
 
         {/* Use flex container to arrange buttons horizontally */}
         <div className="flex flex-col items-center gap-4 mt-4 sm:flex-row sm:justify-center">
-          <button className="w-full py-2 text-white transition-all duration-300 rounded sm:w-48 px-7 bg-naturalPrimary hover:bg-neutralDGrey hover:translate-y-4">
+          {/* <button className="w-full py-2 text-white transition-all duration-300 rounded sm:w-48 px-7 bg-naturalPrimary hover:bg-neutralDGrey hover:translate-y-4">
             Schedule a Call
-          </button>
+          </button> */}
           <Link
             to="/contact"
             className="w-full py-2 text-white transition-all duration-300 rounded sm:w-48 px-7 bg-naturalPrimary hover:bg-neutralDGrey hover:translate-y-4"
           >
-            Contact Us
+            Start a project
           </Link>
         </div>
       </div>

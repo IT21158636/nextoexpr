@@ -37,12 +37,15 @@ function Home() {
           </p>
           <div className="flex items-center justify-center mt-10 gap-x-6">
             <a
-              href="#"
+              href="/contact"
               className="px-4 py-2 text-white rounded bg-naturalPrimary hover:bg-naturalDGrey"
             >
               Get started
             </a>
-            <a href="#" className="font-semibold text-gray-900 text-sm/6">
+            <a
+              href="/contact"
+              className="font-semibold text-gray-900 text-sm/6"
+            >
               Learn more <span aria-hidden="true">→</span>
             </a>
           </div>

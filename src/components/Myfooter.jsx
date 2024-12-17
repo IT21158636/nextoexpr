@@ -38,30 +38,34 @@ function Myfooter() {
               <span className="text-naturalPrimary">NEXTOEX</span>
             </Link>
             <div>
-              <p className="mb-1">copyright @ 2024 nextoex ltd</p>
-              <p>all right reseved</p>
+              <p>© 2024 Nextoex</p>
+              <p className="mb-1">All rights reserved </p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
-            <div>
-              <Footer.Title title="about" />
-              <Footer.LinkGroup col>
-                <Footer.Link href="#">Flowbite</Footer.Link>
-                <Footer.Link href="#">Tailwind CSS</Footer.Link>
-              </Footer.LinkGroup>
-            </div>
-            <div>
-              <Footer.Title title="Follow us" />
-              <Footer.LinkGroup col>
-                <Footer.Link href="#">Github</Footer.Link>
-                <Footer.Link href="#">Discord</Footer.Link>
-              </Footer.LinkGroup>
-            </div>
             <div>
               <Footer.Title title="Legal" />
               <Footer.LinkGroup col>
                 <Footer.Link href="#">Privacy Policy</Footer.Link>
                 <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="about" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="/">Our Story</Footer.Link>
+                <Footer.Link href="/">Meet the Team</Footer.Link>
+                <Footer.Link href="/">Careers</Footer.Link>
+                <Footer.Link href="/contact">Contact Us</Footer.Link>
+              </Footer.LinkGroup>
+            </div>
+            <div>
+              <Footer.Title title="Get in touch" />
+              <Footer.LinkGroup col>
+                <Footer.Link href="#">+94 704673040</Footer.Link>
+                <Footer.Link href="#">+94 704673040</Footer.Link>
+                <Footer.Link href="#">work.nextoex@gmail.com</Footer.Link>
+                <Footer.Link href="#">Malabe Srilanka</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>
@@ -70,8 +74,14 @@ function Myfooter() {
         <div className="w-full sm:flex sm:items-center sm:justify-between">
           <Footer.Copyright href="#" by="Nextoex™" year={2024} />
           <div className="flex mt-4 space-x-6 sm:mt-0 sm:justify-center">
-            <Footer.Icon href="#" icon={BsFacebook} />
-            <Footer.Icon href="#" icon={BsInstagram} />
+            <Footer.Icon
+              href="https://www.facebook.com/Nextoex?mibextid=wwXIfr&mibextid=wwXIfr"
+              icon={BsFacebook}
+            />
+            <Footer.Icon
+              href="https://www.instagram.com/nextoex?igsh=MTNqbG4zdGdsZWpzMQ%3D%3D&utm_source=qr"
+              icon={BsInstagram}
+            />
             <Footer.Icon href="#" icon={BsTwitter} />
             <Footer.Icon href="#" icon={BsGithub} />
             <Footer.Icon href="#" icon={BsDribbble} />
