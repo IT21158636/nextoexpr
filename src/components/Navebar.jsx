@@ -70,13 +70,6 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
-
-            {/* GET STARTED Button */}
-            {/* <RouterLink to="/contact">
-              <button className="px-4 py-2 text-white rounded bg-naturalPrimary hover:bg-naturalDGrey">
-                Contact Us
-              </button>
-            </RouterLink> */}
           </ul>
 
           {/* Mobile Menu Toggle */}
@@ -117,6 +110,7 @@ const Navbar = () => {
     </header>
   );
 };
+
 function debounce(func, wait) {
   let timeout;
   return (...args) => {

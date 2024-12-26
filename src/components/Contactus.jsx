@@ -1,14 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Card } from "flowbite-react";
 import { FaMapMarkerAlt, FaEnvelope, FaPhone } from "react-icons/fa";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({
-  // defines which position of the element regarding to window should trigger the animation
-});
-
 function Contactus() {
+  useEffect(() => {
+    AOS.init({
+      // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
+
   return (
     <div
       data-aos="zoom-in"

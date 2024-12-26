@@ -90,7 +90,7 @@ const Product = () => {
       </h2>
       <p className="mt-2 mb-4 text-sm text-center text-naturalDGrey lg:text-base">
         Harnessing the power of the latest technologies, we deliver exceptional
-        results
+        results.
       </p>
       <div className="relative w-full my-4 overflow-hidden">
         {/* Fading Effect */}
@@ -143,21 +143,6 @@ import img12 from "../assets/techstack/12.png";
 import img13 from "../assets/techstack/13.png";
 import img14 from "../assets/techstack/14.png";
 import img15 from "../assets/techstack/15.png";
-
-// import img2 from "../assets/techstackLogos/img2.png";
-// import img3 from "../assets/techstackLogos/img3.png";
-// import img4 from "../assets/techstackLogos/img4.png";
-// import img5 from "../assets/techstackLogos/img5.png";
-// import img6 from "../assets/techstackLogos/img6.png";
-// import img7 from "../assets/techstackLogos/img7.png";
-// import img8 from "../assets/techstackLogos/img8.png";
-// import img9 from "../assets/techstackLogos/img9.png";
-// import img10 from "../assets/techstackLogos/img10.png";
-// import img11 from "../assets/techstackLogos/img11.png";
-// import img12 from "../assets/techstackLogos/img12.png";
-// import img13 from "../assets/techstackLogos/img13.png";
-// import img14 from "../assets/techstackLogos/img14.png";
-// import img15 from "../assets/techstackLogos/img15.png";
 
 const logos = [
   img1,

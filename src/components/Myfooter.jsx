@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Footer } from "flowbite-react";
 import {
   BsDribbble,
@@ -13,11 +13,13 @@ import { Link } from "react-scroll";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-AOS.init({
-  // defines which position of the element regarding to window should trigger the animation
-});
-
 function Myfooter() {
+  useEffect(() => {
+    AOS.init({
+      // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
+
   return (
     <Footer container>
       <div className="w-full">
@@ -51,7 +53,7 @@ function Myfooter() {
               </Footer.LinkGroup>
             </div>
             <div>
-              <Footer.Title title="about" />
+              <Footer.Title title="About" />
               <Footer.LinkGroup col>
                 <Footer.Link href="/">Our Story</Footer.Link>
                 <Footer.Link href="/">Meet the Team</Footer.Link>
@@ -65,7 +67,7 @@ function Myfooter() {
                 <Footer.Link href="#">+94 704673040</Footer.Link>
                 <Footer.Link href="#">+94 704673040</Footer.Link>
                 <Footer.Link href="#">work.nextoex@gmail.com</Footer.Link>
-                <Footer.Link href="#">Malabe Srilanka</Footer.Link>
+                <Footer.Link href="#">Malabe, Sri Lanka</Footer.Link>
               </Footer.LinkGroup>
             </div>
           </div>

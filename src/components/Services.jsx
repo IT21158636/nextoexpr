@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import img1 from "../assets/web1.png";
@@ -9,46 +9,48 @@ import img5 from "../assets/content.png";
 import img6 from "../assets/prototype.png";
 import Ourclient from "./Ourclient";
 
-AOS.init({
-  // defines which position of the element regarding to window should trigger the animation
-});
-
 function Services() {
+  useEffect(() => {
+    AOS.init({
+      // defines which position of the element regarding to window should trigger the animation
+    });
+  }, []);
+
   const services = [
     {
       id: 1,
       title: "Web Development",
-      description: "Our membership management software",
+      description: "We build responsive and scalable web applications.",
       image: img1,
     },
     {
       id: 2,
       title: "Product Development",
-      description: "Our membership management software",
+      description: "We develop products that meet your business needs.",
       image: img2,
     },
     {
       id: 3,
       title: "UI/UX Design",
-      description: "Our membership management software",
+      description: "We design user-friendly and engaging interfaces.",
       image: img3,
     },
     {
       id: 4,
       title: "Social Media Marketing",
-      description: "Our membership management software",
+      description: "We help you reach a larger audience through social media.",
       image: img4,
     },
     {
       id: 5,
       title: "Content Creation",
-      description: "Our membership management software",
+      description: "We create compelling content for your brand.",
       image: img5,
     },
     {
       id: 6,
       title: "Product Design",
-      description: "Our membership management software",
+      description: "We design products that are both functional and aesthetic.",
       image: img6,
     },
   ];
@@ -69,8 +71,8 @@ function Services() {
           data-aos-anchor-placement="top-bottom"
           className="text-naturalDGrey"
         >
-          we offer a diverse range of IT products and services to elevate your
-          business
+          We offer a diverse range of IT products and services to elevate your
+          business.
         </p>
       </div>
 
