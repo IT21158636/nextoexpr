@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 import { FaTimes, FaBars } from "react-icons/fa";
-import { Link as RouterLink } from "react-router-dom";
+import { Link as RouterLink, useLocation } from "react-router-dom";
 import logo from "../assets/logo.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
   const [activeSection, setActiveSection] = useState(""); // Track active section
+  const location = useLocation();
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -28,7 +29,7 @@ const Navbar = () => {
     { link: "Home", path: "home" },
     { link: "Service", path: "service" },
     { link: "About", path: "about" },
-    { link: "Our Work", path: "Ourwork" },
+    { link: "Our Work", path: "ourwork" },
     { link: "Contact Us", path: "contact" },
   ];
 
@@ -40,34 +41,41 @@ const Navbar = () => {
     >
       <nav className="px-4 py-4 lg:px-14">
         <div className="flex items-center justify-between">
-          <Link
-            to="home"
-            spy={true}
-            smooth={true}
-            offset={-100}
+          <RouterLink
+            to="/"
             className="flex items-center space-x-2 text-2xl font-semibold cursor-pointer"
           >
             <img src={logo} alt="logo" className="w-10" />
             <span className="text-naturalPrimary">NEXTOEX</span>
-          </Link>
+          </RouterLink>
           {/* Desktop Nav Items */}
-          <ul className="space-x-12 lg:flex" hidden>
-            {navItems.map(({ link, path }) => (
+          <ul className="hidden space-x-12 lg:flex">
+            {navItems.map(({ link, path, href }) => (
               <li
-                key={path}
-                className={`hover:text-naturalPrimary ${
-                  activeSection === path ? "text-naturalPrimary font-bold" : ""
+                key={path || href}
+                className={`hover:text-naturalPrimary cursor-pointer ${
+                  activeSection === path || location.pathname === href
+                    ? "text-naturalPrimary font-bold"
+                    : ""
                 }`}
               >
-                <Link
-                  to={path}
-                  spy={true}
-                  smooth={true}
-                  offset={-100}
-                  onSetActive={() => setActiveSection(path)}
-                >
-                  {link}
-                </Link>
+                {href ? (
+                  <RouterLink to={href} onClick={() => setIsMenuOpen(false)}>
+                    {link}
+                  </RouterLink>
+                ) : (
+                  <ScrollLink
+                    to={path}
+                    spy={true}
+                    smooth={true}
+                    duration={300} // Adjust duration for faster scrolling
+                    offset={-100}
+                    onSetActive={() => setActiveSection(path)}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {link}
+                  </ScrollLink>
+                )}
               </li>
             ))}
           </ul>
@@ -87,23 +95,32 @@ const Navbar = () => {
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        {navItems.map(({ link, path }) => (
+        {navItems.map(({ link, path, href }) => (
           <li
-            key={path}
-            className={`py-2 text-center hover:bg-gray-100 ${
-              activeSection === path ? "bg-naturalPrimary text-white" : ""
+            key={path || href}
+            className={`py-2 text-center hover:bg-gray-100 cursor-pointer ${
+              activeSection === path || location.pathname === href
+                ? "bg-naturalPrimary text-white"
+                : ""
             }`}
           >
-            <Link
-              to={path}
-              spy={true}
-              smooth={true}
-              offset={-100}
-              onSetActive={() => setActiveSection(path)}
-              onClick={() => setIsMenuOpen(false)}
-            >
-              {link}
-            </Link>
+            {href ? (
+              <RouterLink to={href} onClick={() => setIsMenuOpen(false)}>
+                {link}
+              </RouterLink>
+            ) : (
+              <ScrollLink
+                to={path}
+                spy={true}
+                smooth={true}
+                duration={300} // Adjust duration for faster scrolling
+                offset={-100}
+                onSetActive={() => setActiveSection(path)}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link}
+              </ScrollLink>
+            )}
           </li>
         ))}
       </ul>

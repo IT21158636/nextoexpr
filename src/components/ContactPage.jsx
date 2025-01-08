@@ -7,8 +7,8 @@ function ContactPage() {
   return (
     <div>
       <Nabarc />
-      <div className="text-center section-title" style={{ marginTop: "40px" }}>
-        <h1 className="text-4xl sm:text-1xl  text-#1E1C34 font-semibold mb-4">
+      <div className="text-center section-title" style={{ marginTop: "70px" }}>
+        <h1 className="text-4xl sm:text-1xl  text-#1E1C34 font-semibold ">
           <br></br>You like coffee? Us too! have a chat{" "}
         </h1>
       </div>

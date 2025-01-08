@@ -74,7 +74,7 @@ function Myfooter() {
         </div>
         <Footer.Divider />
         <div className="w-full sm:flex sm:items-center sm:justify-between">
-          <Footer.Copyright href="#" by="Nextoex™" year={2024} />
+          <Footer.Copyright href="#" by="Nextoex™" year={2025} />
           <div className="flex mt-4 space-x-6 sm:mt-0 sm:justify-center">
             <Footer.Icon
               href="https://www.facebook.com/Nextoex?mibextid=wwXIfr&mibextid=wwXIfr"

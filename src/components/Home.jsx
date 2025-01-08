@@ -1,11 +1,12 @@
 import React from "react";
 import { Carousel } from "flowbite-react";
+import VantaNet from "./VantaNetBackground";
 
 function Home() {
   return (
     <div className="relative px-6 isolate pt-14 lg:px-8">
       <div
-        className="absolute inset-x-0 overflow-hidden -top-40 -z-10 transform-gpu blur-3xl sm:-top-80"
+        className="absolute inset-x-0 overflow-hidden -top-40 -z-10 transform-gpu blur-3xl sm:-top-80 "
         aria-hidden="true"
       >
         <div
@@ -30,6 +31,7 @@ function Home() {
           <h1 className="font-semibold tracking-tight text-gray-900 text-10xl text-balance sm:text-7xl">
             Empowering Digital Growth.
           </h1>
+
           <p className="mt-8 text-lg font-medium text-gray-500 text-pretty sm:text-xl/8">
             Transform your ideas into reality with innovative software
             development, cloud services, and IT consulting. Let's build the

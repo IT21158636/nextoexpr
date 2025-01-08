@@ -59,10 +59,11 @@ function Services() {
     <div className="px-4 py-16 mx-auto md:px-14 max-w-screen-2xl">
       <Ourclient />
 
-      <div className="mx-auto mt-20 text-center md:w-1/2" id="service">
+      <div className="mx-auto mt-20 text-center md:w-1/2">
         <h2
           data-aos="fade-left"
-          className="mb-3 text-4xl font-semibold text-naturalDGrey"
+          className="mb-3 text-4xl font-semibold text-naturalDGrey "
+          id="service"
         >
           Check our Services
         </h2>
