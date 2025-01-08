@@ -25,6 +25,22 @@ const Navbar = () => {
     };
   }, []);
 
+  const handleNavigation = (path, href) => {
+    if (href) {
+      // External route navigation
+      setIsMenuOpen(false); // Close the menu
+      window.location.href = href; // Navigate to the specified route
+    } else if (path) {
+      // Internal scroll navigation
+      setActiveSection(path); // Update the active section state
+      setIsMenuOpen(false); // Close the menu
+      document.querySelector(`#${path}`)?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      }); // Scroll to the specified section smoothly
+    }
+  };
+
   const navItems = [
     { link: "Home", path: "home" },
     { link: "Service", path: "service" },
@@ -98,18 +114,34 @@ const Navbar = () => {
         {navItems.map(({ link, path, href }) => (
           <li
             key={path || href}
+            onClick={() => handleNavigation(path, href)}
             className={`py-2 text-center hover:bg-gray-100 cursor-pointer ${
               activeSection === path || location.pathname === href
                 ? "bg-naturalPrimary text-white"
                 : ""
             }`}
+            style={{
+              width: "100%",
+              // backgroundColor: "red", // Optional style
+            }}
           >
             {href ? (
-              <RouterLink to={href} onClick={() => setIsMenuOpen(false)}>
+              <RouterLink
+                to={href}
+                onClick={() => setIsMenuOpen(false)}
+                style={{
+                  width: "100%",
+                  // backgroundColor: "red", // Optional style
+                }}
+              >
                 {link}
               </RouterLink>
             ) : (
               <ScrollLink
+                style={{
+                  width: "100%",
+                  // backgroundColor: "red", // Optional style
+                }}
                 to={path}
                 spy={true}
                 smooth={true}

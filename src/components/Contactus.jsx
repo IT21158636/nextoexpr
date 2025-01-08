@@ -14,7 +14,7 @@ function Contactus() {
   return (
     <div
       data-aos="zoom-in"
-      className="px-4 mx-auto my-8 lg:px-14 max-w-screen-2xl" 
+      className="px-4 mx-auto my-8 lg:px-14 max-w-screen-2xl"
     >
       <div className="grid grid-cols-1 gap-12 mx-auto mt-14 lg:grid-cols-3 md:grid-cols-2 md:w-11/12">
         <Card className="max-w-sm text-center">

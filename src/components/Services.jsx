@@ -12,7 +12,8 @@ import Ourclient from "./Ourclient";
 function Services() {
   useEffect(() => {
     AOS.init({
-      // defines which position of the element regarding to window should trigger the animation
+      once: false, // Trigger animation only once
+      duration: 1000, // Duration of animation
     });
   }, []);
 
@@ -86,7 +87,12 @@ function Services() {
           >
             <div>
               <div className="bg-[#D0CDFD] mb-4 h-14 w-14 mx-auto rounded-tl-3xl rounded-br-3xl">
-                <img src={service.image} alt="" className="-ml-5" />
+                <img
+                  src={service.image}
+                  alt={service.title}
+                  className="-ml-5"
+                  loading="lazy"
+                />
               </div>
               <h4 className="px-2 mb-2 text-2xl font-bold text-naturalDGrey">
                 {service.title}

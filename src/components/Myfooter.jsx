@@ -9,14 +9,13 @@ import {
 } from "react-icons/bs";
 import logo from "../assets/logo.jpg";
 import { Link } from "react-scroll";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
 
 function Myfooter() {
   useEffect(() => {
     AOS.init({
-      // defines which position of the element regarding to window should trigger the animation
+      // Defines which position of the element regarding to window should trigger the animation
     });
   }, []);
 
@@ -36,20 +35,28 @@ function Myfooter() {
               offset={-100}
               className="flex items-center space-x-2 text-2xl font-semibold"
             >
-              <img src={logo} alt="logo" className="inline-block w-10" />
+              <img
+                src={logo}
+                alt="Nextoex Logo"
+                className="inline-block w-10"
+              />
               <span className="text-naturalPrimary">NEXTOEX</span>
             </Link>
             <div>
-              <p>© 2024 Nextoex</p>
-              <p className="mb-1">All rights reserved </p>
+              <p>© 2025 Nextoex</p>
+              <p className="mb-1">All rights reserved</p>
             </div>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:mt-4 sm:grid-cols-3 sm:gap-6">
             <div>
               <Footer.Title title="Legal" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">Privacy Policy</Footer.Link>
-                <Footer.Link href="#">Terms &amp; Conditions</Footer.Link>
+                <Footer.Link href="#" target="_blank" rel="noopener noreferrer">
+                  Privacy Policy
+                </Footer.Link>
+                <Footer.Link href="#" target="_blank" rel="noopener noreferrer">
+                  Terms & Conditions
+                </Footer.Link>
               </Footer.LinkGroup>
             </div>
             <div>
@@ -64,9 +71,11 @@ function Myfooter() {
             <div>
               <Footer.Title title="Get in touch" />
               <Footer.LinkGroup col>
-                <Footer.Link href="#">+94 704673040</Footer.Link>
-                <Footer.Link href="#">+94 704673040</Footer.Link>
-                <Footer.Link href="#">work.nextoex@gmail.com</Footer.Link>
+                <Footer.Link href="tel:+94704673040">+94 704673040</Footer.Link>
+                <Footer.Link href="tel:+94704673040">+94 704673040</Footer.Link>
+                <Footer.Link href="mailto:work.nextoex@gmail.com">
+                  work.nextoex@gmail.com
+                </Footer.Link>
                 <Footer.Link href="#">Malabe, Sri Lanka</Footer.Link>
               </Footer.LinkGroup>
             </div>
@@ -79,14 +88,28 @@ function Myfooter() {
             <Footer.Icon
               href="https://www.facebook.com/Nextoex?mibextid=wwXIfr&mibextid=wwXIfr"
               icon={BsFacebook}
+              target="_blank"
             />
             <Footer.Icon
               href="https://www.instagram.com/nextoex?igsh=MTNqbG4zdGdsZWpzMQ%3D%3D&utm_source=qr"
               icon={BsInstagram}
+              target="_blank"
             />
-            <Footer.Icon href="#" icon={BsTwitter} />
-            <Footer.Icon href="#" icon={BsGithub} />
-            <Footer.Icon href="#" icon={BsDribbble} />
+            <Footer.Icon
+              href="https://twitter.com/Nextoex"
+              icon={BsTwitter}
+              target="_blank"
+            />
+            <Footer.Icon
+              href="https://github.com/Nextoex"
+              icon={BsGithub}
+              target="_blank"
+            />
+            <Footer.Icon
+              href="https://dribbble.com/Nextoex"
+              icon={BsDribbble}
+              target="_blank"
+            />
           </div>
         </div>
       </div>
