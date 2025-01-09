@@ -97,7 +97,7 @@ function AboutUs() {
                 />
                 <div>
                   <h4 className="text-2xl font-semibold text-naturalDGrey">
-                    +50
+                    +10
                   </h4>
                   <p>Happy Clients</p>
                 </div>
@@ -110,7 +110,7 @@ function AboutUs() {
                 />
                 <div>
                   <h4 className="text-2xl font-semibold text-naturalDGrey">
-                    +100
+                    +10
                   </h4>
                   <p>Projects</p>
                 </div>
@@ -138,7 +138,7 @@ function AboutUs() {
                 />
                 <div>
                   <h4 className="text-2xl font-semibold text-naturalDGrey">
-                    +200
+                    +50
                   </h4>
                   <p>Hard Workers</p>
                 </div>
